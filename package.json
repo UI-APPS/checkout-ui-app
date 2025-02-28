@@ -3,17 +3,20 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
+    "deploy": "pnpm run build && wrangler pages deploy",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "rebuild": "wrangler pages rebuild"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "stripe": "^17.6.0"
+    "stripe": "^17.6.0",
+    "wrangler": "^3.111.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -28,7 +31,29 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "esbuild",
       "sharp"
+    ],
+    "ignoredBuiltDependencies": [
+      "workerd"
     ]
-  }
+  },
+  "description": "## Getting Started",
+  "main": "app/page.tsx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UI-APPS/checkout-ui-app.git"
+  },
+  "keywords": [
+    "ui-app",
+    "checkout",
+    "dinamic",
+    "maarketplace"
+  ],
+  "author": "Ghepes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UI-APPS/checkout-ui-app/issues"
+  },
+  "homepage": "https://github.com/UI-APPS/checkout-ui-app#readme"
 }

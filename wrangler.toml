@@ -1,0 +1,22 @@
+name = "autor-dev-pkg-checkout"
+main = "app/page.tsx"
+compatibility_date = "2024-05-01"
+
+[build]
+command = "npm run build"
+upload_dir = ".next/static"
+
+[env.production]
+STRIPE_SECRET_KEY = "${STRIPE_SECRET_KEY}"
+NEXT_PUBLIC_SITE_URL = "${NEXT_PUBLIC_SITE_URL}"
+
+[[r2_buckets]]
+binding = "MY_BUCKET"
+bucket_name = "my-bucket"
+
+[site]
+bucket = ".next/static"
+entry-point = "app"
+
+[triggers]
+crons = ["0 0 * * *"]

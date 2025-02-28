@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
         STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
     },
     // Optional: Configure API routes to be server-side only
+    output: 'standalone',
+    experimental: {
+      serverComponentsExternalPackages: ['@cloudflare/next-on-pages'],
+    },
   }
-
-export default nextConfig
+  
+  export default nextConfig
