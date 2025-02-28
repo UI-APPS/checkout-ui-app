@@ -1,5 +1,7 @@
 # checkout.ui-app
 
+## This code is customized to help the main website to execute checkout even if it is in html format
+
 ## Getting Started
 
 First, run the development server:
