@@ -30,7 +30,7 @@ export async function POST(req: Request) {
         quantity: item.quantity,
       })),
       success_url: `https://ui-app.com/success?session_id={CHECKOUT_SESSION_ID}`,
-      apiVersion: '2025-02-24.acacia',
+      apiVersion: '2025-01-27.acacia',
       cancel_url: `https://ui-app.com/cart`,
       metadata: {
         user_id: userId,
